@@ -87,5 +87,5 @@ From the logfile.txt we save the number numberOfIdentities(10)= 20
 ||h_10||_2^2=2*(67640-20^2)+20^2=2*67640-20^2=134880
 
 In general
-||h_n||_2^2=2*(a_n - numberOfIdentities(n)^2) + numberOfIdentities(n)^2=2*a_n - numberOfIdentities(n)^2 for n>2.
+||h_n||_2^2=2*a_n - numberOfIdentities(n)^2 for n>2.
 
