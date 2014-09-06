@@ -1,0 +1,91 @@
+Instructions for obtaining the list of "half numbers " (for case h=A+B+A^-1+B^-1):
+
+a0=1 a1=2, a2=6, a3=18, a4=54, a5=172, a6=538, a7=1750, a8=5662, a9=19354, a10=67640,...
+
+The numbers (a_n) are used to calculate the squared 2-norms ||h_n||^2 as done in the examples below (and in the Mathematica file ABAinvBinv). 
+
+--------------------------------------------------------------------
+
+To compute a0 run the following two commands:
+FL2normOnFilesHalf 0
+uniqRIMn0.bat
+
+To compute a1 run the following three commands:
+FL2normOnFilesHalf 1
+./sortparts.sh 1
+uniqRIMn1.bat
+
+To compute a2 run the following three commands:
+FL2normOnFilesHalf 2
+./sortparts.sh 2
+uniqRImn2.bat
+
+To compute a_n, n>2 run the following three commands:
+FL2normOnfFilesHalf n
+./sortparts.sh n
+uniqRIM.bat n n-2
+
+---------------------------------------------------------------------
+
+The results are stored in the files n[number].stats and logfile.txt. (see the examples below for more details)
+
+---------------------------------------------------------------------
+
+REMARKS:
+
+(1) FL2normOnFilesHalf.exe and uniqRIMGMP.exe are C# programs compiled in Windows 7. 
+    They use "big integers" and for that we need the DLLs: Emil.GMP.dll and libgmp-3.dll
+
+(2) We installed Cygwin in Windows 7 to be able to use the gnu sort command.
+    (we could not use the gnu sort from coreutils-win32-5.3.0-bin because the LC_ALL=C was ignored).
+
+(3) We use the command cat from coreutils-win32-5.3.0-bin (and it uses the DLLs: libiconv2.dll and libintl3.dll).
+
+(A future plan is to rewrite the C# code to cpp and run everything in linux.)
+
+---------------------------------------------------------------------
+
+EXAMPLES:
+
+The file n2.stats should contain:
+{4,4,4}+		{count, sum, squaressum}src= n2p0s.forest previousSrc= n0p0ur.forest dest= n2p0ur.forest
+{1,1,1}+		{count, sum, squaressum}src= n2p1s.forest previousSrc= n0p1ur.forest dest= n2p1ur.forest
+{1,1,1}+		{count, sum, squaressum}src= n2p2s.forest previousSrc= n0p2ur.forest dest= n2p2ur.forest
+{0,0,0}+		{count, sum, squaressum}src= n2p3s.forest previousSrc= n0p3ur.forest dest= n2p3ur.forest
+{0,0,0}+		{count, sum, squaressum}src= n2p4s.forest previousSrc= n0p4ur.forest dest= n2p4ur.forest
+{0,0,0}+		{count, sum, squaressum}src= n2p5s.forest previousSrc= n0p5ur.forest dest= n2p5ur.forest
+{0,0,0}+		{count, sum, squaressum}src= n2p6s.forest previousSrc= n0p6ur.forest dest= n2p6ur.forest
+{0,0,0}+		{count, sum, squaressum}src= n2p7s.forest previousSrc= n0p7ur.forest dest= n2p7ur.forest
+Adding these numbers we get {{6, 6, 6}}, and we save the number  a2=squaressum_2=6
+From the logfile.txt we have numberOfIdentities(2)= 4 but this is the only special case and we save numberOfIdentities(2)=0 (the why is explained in the code of the c# program)
+||h_2||_2^2=2*6=12
+
+The file n3.stats should contain:
+{11,11,11}+		{count, sum, squaressum}src= n3p0s.forest previousSrc= n1p0ur.forest dest= n3p0ur.forest
+{2,2,2}+		{count, sum, squaressum}src= n3p1s.forest previousSrc= n1p1ur.forest dest= n3p1ur.forest
+{2,2,2}+		{count, sum, squaressum}src= n3p2s.forest previousSrc= n1p2ur.forest dest= n3p2ur.forest
+{2,2,2}+		{count, sum, squaressum}src= n3p3s.forest previousSrc= n1p3ur.forest dest= n3p3ur.forest
+{1,1,1}+		{count, sum, squaressum}src= n3p4s.forest previousSrc= n1p4ur.forest dest= n3p4ur.forest
+{0,0,0}+		{count, sum, squaressum}src= n3p5s.forest previousSrc= n1p5ur.forest dest= n3p5ur.forest
+{0,0,0}+		{count, sum, squaressum}src= n3p6s.forest previousSrc= n1p6ur.forest dest= n3p6ur.forest
+{0,0,0}+		{count, sum, squaressum}src= n3p7s.forest previousSrc= n1p7ur.forest dest= n3p7ur.forest
+Adding these numbers we get {{18, 18, 18}} and we save the number a3=squaressum_3=18
+From the logfile.txt we save the number numberOfIdentities(3)= 0
+||h_3||_2^2=2*18=36
+
+The file n10.stats should contain:
+{12192,14309,20633}+		{count, sum, squaressum}src= n10p0s.forest previousSrc= n8p0ur.forest dest= n10p0ur.forest
+{2971,3879,6569}+		{count, sum, squaressum}src= n10p1s.forest previousSrc= n8p1ur.forest dest= n10p1ur.forest
+{2362,3134,5910}+		{count, sum, squaressum}src= n10p2s.forest previousSrc= n8p2ur.forest dest= n10p2ur.forest
+{3249,4405,7949}+		{count, sum, squaressum}src= n10p3s.forest previousSrc= n8p3ur.forest dest= n10p3ur.forest
+{3241,3850,5874}+		{count, sum, squaressum}src= n10p4s.forest previousSrc= n8p4ur.forest dest= n10p4ur.forest
+{2869,4162,9034}+		{count, sum, squaressum}src= n10p5s.forest previousSrc= n8p5ur.forest dest= n10p5ur.forest
+{2724,3679,6763}+		{count, sum, squaressum}src= n10p6s.forest previousSrc= n8p6ur.forest dest= n10p6ur.forest
+{1131,1958,4908}+		{count, sum, squaressum}src= n10p7s.forest previousSrc= n8p7ur.forest dest= n10p7ur.forest
+Adding these numbers we get {{30739, 39376, 67640}} and we save the number a10=squaressum_10=67640
+From the logfile.txt we save the number numberOfIdentities(10)= 20
+||h_10||_2^2=2*(67640-20^2)+20^2=2*67640-20^2=134880
+
+In general
+||h_n||_2^2=2*(a_n - numberOfIdentities(n)^2) + numberOfIdentities(n)^2=2*a_n - numberOfIdentities(n)^2 for n>2.
+

@@ -1,1 +1,0 @@
-C# code for Thompson group F
