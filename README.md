@@ -7,6 +7,4 @@ by  S. HAAGERUP, U. HAAGERUP, M. RAMIREZ-SOLANO.
 This series of numbers are key ingredient for all the computations done in the mentioned article.
 The instructions for the binaries (for Windows 7)  are in /Binaries/FL2NormOnFilesHalfSize/INSTRUCTIONS.txt
 
-We input this generated series of numbers (case h=A+B+A^-1+B^-1) into the mathematica file  /Binaries/Mathematica/ABAinvBinv.nb
-(We include a pdf version of the mathematica file.)
-
+We input this generated series of numbers (case h=A+B+A^-1+B^-1) into the mathematica file  /Binaries/Mathematica/ABAinvBinv.nb to obtain moments, graphs, norms, etc. (We include a pdf version of the mathematica file.)
