@@ -1,0 +1,8 @@
+C:\Users\maria\Documents\Visual Studio 2013\Projects\ToPublish\uniqRIMGMP\uniqRIMGMP\bin\Debug\uniqRIMGMP.exe.config
+C:\Users\maria\Documents\Visual Studio 2013\Projects\ToPublish\uniqRIMGMP\uniqRIMGMP\bin\Debug\uniqRIMGMP.exe
+C:\Users\maria\Documents\Visual Studio 2013\Projects\ToPublish\uniqRIMGMP\uniqRIMGMP\bin\Debug\uniqRIMGMP.pdb
+C:\Users\maria\Documents\Visual Studio 2013\Projects\ToPublish\uniqRIMGMP\uniqRIMGMP\bin\Debug\Emil.GMP.dll
+C:\Users\maria\Documents\Visual Studio 2013\Projects\ToPublish\uniqRIMGMP\uniqRIMGMP\bin\Debug\Emil.GMP.pdb
+C:\Users\maria\Documents\Visual Studio 2013\Projects\ToPublish\uniqRIMGMP\uniqRIMGMP\obj\Debug\uniqRIMGMP.csprojResolveAssemblyReference.cache
+C:\Users\maria\Documents\Visual Studio 2013\Projects\ToPublish\uniqRIMGMP\uniqRIMGMP\obj\Debug\uniqRIMGMP.exe
+C:\Users\maria\Documents\Visual Studio 2013\Projects\ToPublish\uniqRIMGMP\uniqRIMGMP\obj\Debug\uniqRIMGMP.pdb

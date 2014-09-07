@@ -1,0 +1,20 @@
+***LOG ENTRY Sun, 07 Sep 2014 00:10:06 GMT ***
+Computing n(2) using 3 threads...
+numberOfIdentities(2)= 4, numberOfSecondHalfs(2)= 6
+
+- End of program. Runtime: 00:00:00.05. Press a key to exit -
+***LOG ENTRY Sun, 07 Sep 2014 00:15:25 GMT ***
+Computing n(2) using 3 threads...
+numberOfIdentities(2)= 4, numberOfSecondHalfs(2)= 6
+
+- End of program. Runtime: 00:00:00.05. Press a key to exit -
+***LOG ENTRY Sun, 07 Sep 2014 00:15:37 GMT ***
+Computing n(2) using 3 threads...
+numberOfIdentities(2)= 4, numberOfSecondHalfs(2)= 6
+
+- End of program. Runtime: 00:00:00.05. Press a key to exit -
+***LOG ENTRY Sun, 07 Sep 2014 14:35:30 GMT ***
+Computing n(2) using 3 threads...
+numberOfIdentities(2)= 4, numberOfSecondHalfs(2)= 6
+
+- End of program. Runtime: 00:00:00.05. Press a key to exit -

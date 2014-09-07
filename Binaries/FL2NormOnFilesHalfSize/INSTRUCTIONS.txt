@@ -7,21 +7,21 @@ The numbers (a_n) are used to calculate the squared 2-norms ||h_n||_2^2 as done 
 --------------------------------------------------------------------
 
 To compute a0 run the following two commands:
-FL2normOnFilesHalf 0
+FL2normOnFilesHalfSize 0
 uniqRIMn0.bat
 
 To compute a1 run the following three commands:
-FL2normOnFilesHalf 1
+FL2normOnFilesHalfSize 1
 ./sortparts.sh 1
 uniqRIMn1.bat
 
 To compute a2 run the following three commands:
-FL2normOnFilesHalf 2
+FL2normOnFilesHalfSize 2
 ./sortparts.sh 2
 uniqRImn2.bat
 
 To compute a_n, n>2 run the following three commands:
-FL2normOnfFilesHalf n
+FL2normOnfFilesHalfSize n
 ./sortparts.sh n
 uniqRIM.bat n n-2
 
@@ -33,13 +33,16 @@ The results are stored in the files n[number].stats and logfile.txt. (see the ex
 
 REMARKS:
 
-(1) FL2normOnFilesHalf.exe and uniqRIMGMP.exe are C# programs compiled in Windows 7. 
-    They use "big integers" and for that we need the DLLs: Emil.GMP.dll and libgmp-3.dll
+(1) FL2normOnFilesHalfSize.exe and uniqRIMGMP.exe are C# programs compiled in Windows 7. 
+    The second file uses "big integers" and for that we need the DLLs: Emil.GMP.dll and libgmp-3.dll
+    (http://web.rememberingemil.org/Projects/Files/GnuMpDotNet/)
 
 (2) We installed Cygwin in Windows 7 to be able to use the gnu sort command.
     (we could not use the gnu sort from coreutils-win32-5.3.0-bin because the LC_ALL=C was ignored).
+    (https://www.cygwin.com/)
 
 (3) We use the command cat from coreutils-win32-5.3.0-bin (and it uses the DLLs: libiconv2.dll and libintl3.dll).
+    (https://unix-cmd-win32.googlecode.com/files/coreutils-win32-5.3.0-bin.zip)
 
 (A future plan is to rewrite the C# code to cpp and run everything in linux.)
 
@@ -57,7 +60,7 @@ The file n2.stats should contain:
 {0,0,0}+		{count, sum, squaressum}src= n2p6s.forest previousSrc= n0p6ur.forest dest= n2p6ur.forest
 {0,0,0}+		{count, sum, squaressum}src= n2p7s.forest previousSrc= n0p7ur.forest dest= n2p7ur.forest
 Adding these numbers we get {{6, 6, 6}}, and we save the number  a2=squaressum_2=6
-From the logfile.txt we have numberOfIdentities(2)= 4 but this is the only special case and we save numberOfIdentities(2)=0 (the why is explained in the code of the c# program)
+From the logfile.txt we have numberOfIdentities(2)= 4 but this is the only special case and we save numberOfIdentities(2)=0 (for the why see below)
 ||h_2||_2^2=2*6=12
 
 The file n3.stats should contain:
@@ -84,8 +87,30 @@ The file n10.stats should contain:
 {1131,1958,4908}+		{count, sum, squaressum}src= n10p7s.forest previousSrc= n8p7ur.forest dest= n10p7ur.forest
 Adding these numbers we get {{30739, 39376, 67640}} and we save the number a10=squaressum_10=67640
 From the logfile.txt we save the number numberOfIdentities(10)= 20
-||h_10||_2^2=2*(67640-20^2)+20^2=2*67640-20^2=134880
+||h_10||_2^2=2*67640-20^2=134880
 
 In general
 ||h_n||_2^2=2*a_n - numberOfIdentities(n)^2 for n>2.
+
+MATHEMATICS:
+The squared 2-norms ||h_n||_2^2 are defined in Section 3 of the article 
+"A COMPUTATIONAL APPROACH TO THE THOMPSON GROUP F" 
+by S. HAAGERUP, U. HAAGERUP, M. RAMIREZ-SOLANO.
+
+More precisely,
+||h_n||_2^2 = sum_{x\in Y_n} (c_x^(n))^2 where Y_n are all the distinct terms of the sum in h_n and c_x^(n) are the frequencies of term x.
+Each term is a homeomorphism of the Thompson group F represented as a reduced double tree x. 
+A tree can be serialized and so we can compare x with its inverse x^{-1} lexicografically.
+Thus 
+Y_n = Y_n^+  disjointUnion  Y_n^-  disjointUnion {e}
+where Y_n^+ := { x in Y_n  where x > x^-1 lexicografically}
+Moreover, c_x^(n)=c_{x^-1}^(n) because h_n=h_n^*. Hence
+
+||h_n||_2^2 = 2 * (sum_{x in Y_n^+ union {e} }  (c_x^(n))^2 ) - (c_e^(n))^2
+            = 2 * a_n  - numberOfIdentities(n)^2
+
+Case n=2 is a special case as explained in the proof of Theorem 6.2 of the mentioned article.
+
+
+
 

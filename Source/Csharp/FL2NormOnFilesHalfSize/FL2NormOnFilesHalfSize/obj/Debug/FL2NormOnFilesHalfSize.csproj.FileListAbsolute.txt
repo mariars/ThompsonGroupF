@@ -1,0 +1,6 @@
+C:\Users\maria\Documents\Visual Studio 2013\Projects\ToPublish\FL2NormOnFilesHalfSize\FL2NormOnFilesHalfSize\bin\Debug\FL2NormOnFilesHalfSize.exe.config
+C:\Users\maria\Documents\Visual Studio 2013\Projects\ToPublish\FL2NormOnFilesHalfSize\FL2NormOnFilesHalfSize\bin\Debug\FL2NormOnFilesHalfSize.exe
+C:\Users\maria\Documents\Visual Studio 2013\Projects\ToPublish\FL2NormOnFilesHalfSize\FL2NormOnFilesHalfSize\bin\Debug\FL2NormOnFilesHalfSize.pdb
+C:\Users\maria\Documents\Visual Studio 2013\Projects\ToPublish\FL2NormOnFilesHalfSize\FL2NormOnFilesHalfSize\obj\Debug\FL2NormOnFilesHalfSize.csprojResolveAssemblyReference.cache
+C:\Users\maria\Documents\Visual Studio 2013\Projects\ToPublish\FL2NormOnFilesHalfSize\FL2NormOnFilesHalfSize\obj\Debug\FL2NormOnFilesHalfSize.exe
+C:\Users\maria\Documents\Visual Studio 2013\Projects\ToPublish\FL2NormOnFilesHalfSize\FL2NormOnFilesHalfSize\obj\Debug\FL2NormOnFilesHalfSize.pdb
